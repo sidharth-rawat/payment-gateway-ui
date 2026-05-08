@@ -26,7 +26,7 @@ export function usePayment() {
   } = usePaymentStore();
 
   const submit = useCallback(
-    async (values: PaymentFormValues, cardType: CardType) => {
+    async (values: PaymentFormValues, _cardType: CardType) => {
       // Generate transactionId only on first attempt
       if (!transactionIdRef.current) {
         transactionIdRef.current = crypto.randomUUID();
@@ -118,7 +118,7 @@ export function usePayment() {
   );
 
   const retry = useCallback(
-    (values: PaymentFormValues, cardType: CardType) => {
+    (values: PaymentFormValues, _cardType: CardType) => {
       if (attemptCount >= MAX_ATTEMPTS) return;
       submit(values, cardType);
     },
