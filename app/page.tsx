@@ -38,7 +38,7 @@ export default function HomePage() {
       <div className="mx-auto max-w-5xl">
         {/* Header */}
         <header className="mb-8 text-center">
-          <h1 className="text-2xl font-bold text-slate-800 sm:text-3xl">Secure Payment</h1>
+          <h1 className="text-2xl font-bold text-slate-800 sm:text-3xl">Secured Payment</h1>
           <p className="mt-1 text-sm text-slate-500">
             Your payment information is encrypted and secure
           </p>
